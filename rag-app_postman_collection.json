@@ -1,0 +1,23 @@
+{
+  "info": { "name": "RAG API", "_postman_id": "rag-sample" },
+  "item": [
+    {
+      "name": "Upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": { "mode": "formdata", "formdata": [ { "key": "file", "type":"file", "src": "" } ] },
+        "url": { "raw": "http://localhost:8000/api/upload", "protocol":"http", "host":["localhost"], "port":"8000", "path":["api","upload"] }
+      }
+    },
+    {
+      "name": "Query",
+      "request": {
+        "method": "POST",
+        "header": [ { "key":"Content-Type", "value":"application/json" } ],
+        "body": { "mode":"raw", "raw":"{ \"query\":\"What is X?\" }" },
+        "url": { "raw": "http://localhost:8000/api/query", "protocol":"http", "host":["localhost"], "port":"8000", "path":["api","query"] }
+      }
+    }
+  ]
+}
